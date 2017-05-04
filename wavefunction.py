@@ -35,6 +35,9 @@ def init():
 
 ani = animation.FuncAnimation(fig, animate, np.arange(1, 200), init_func=init,
                               interval=25, blit=True)
-ani.save("wavefunction.gif", dpi=100, writer="imagemagick")
+save = False
+#requires imagemagick to be installed
+if save:
+    ani.save("wavefunction.gif", dpi=100, writer="imagemagick")
 
 plt.show()
